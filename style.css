@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap');
+
+html{
+    font-family: 'Figtree', sans-serif;;
+}
+*, 
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;  
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-primary);
+}
+
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--clr-neutral-1000);
+}
+
+:root{
+    --clr-primary:hsl(47, 88%, 63%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-500: hsl(0, 0%, 50%);
+    --clr-neutral-1000: hsl(0, 0%, 7%);
+
+    --fs-paragraph: 1rem;
+    --fw-semi: 600;
+    --fw-extra:800;
+
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 24.5rem;
+    background-color: var(--clr-neutral-100);
+    border-radius: .925rem;
+    border: 1px solid black;
+    padding: 0 1rem;
+    box-shadow: .5rem .5rem;
+}
+    main{
+        margin: 0.938rem;
+    }
+    h1:hover{
+        cursor: pointer;
+        color: var(--clr-primary);
+        transition: 500ms;
+    }
+    main:has(h1:hover)
+{
+    box-shadow: .8rem .8rem;
+    border-radius: 10px;
+    transition: 500ms;
+}
+span{
+    background-color:var(--clr-primary);
+    padding: .4rem .8rem;
+    border-radius: 5px;
+    font-weight: var(--fw-extra);
+    margin-left: 10px;
+}
+.content{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 15px;
+}
+.picture img{
+    border-radius: 5%;
+}
+
+.title{
+    font-size: 1.7rem;
+}
+
+.content p {
+    font-size: var(--fs-paragraph);
+    color: var(--clr-neutral-500);
+    line-height: 1.7rem;
+}
+.profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 10px;
+}
+.profile p{
+    font-weight: var(--fw-extra);
+    color: var(--clr-neutral-1000);
+}
+.profile img{
+    height: auto;
+    width: auto;
+    max-width:40px;
+    max-height: 40px;
+}
+
+
+.attribution a{
+    font-weight: var(--fw-extra);
+}
+
+.attribution a:hover{
+    background-color: var(--clr-neutral-1000);
+    color: var(--clr-primary);
+    font-size: large;
+    transition: 700ms;
+}
+ @media(max-width: 375px){
+    .title{
+        text-wrap: nowrap;
+    }
+    footer{
+        position: absolute;
+        bottom: 2px;
+        text-align: center;
+    }
+
+ }
